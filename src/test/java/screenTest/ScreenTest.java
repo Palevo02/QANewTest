@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -21,7 +22,11 @@ public class ScreenTest {
     @Test
     public void testScreenIphone12Pro(TestInfo info) {
         Configuration.browserSize = "390x844";
-        Configuration.headless = false;
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-gpu");
+        Configuration.browserCapabilities = options;
         Selenide.open("https://forum.minecraft-galaxy.ru/guilogin/");
         assertScreen(info);
 //        info.getTestMethod().get().getName()
