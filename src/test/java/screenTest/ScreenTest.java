@@ -64,13 +64,6 @@ public class ScreenTest {
 
     }
 
-
-
-
-
-
-
-
     @Attachment(value = "{name}", type = "image/png")
     private static byte[] saveScreenshot(String name, byte[] image) {
         return image;
