@@ -21,6 +21,7 @@ public class ScreenTest {
     @Test
     public void testScreenIphone12Pro(TestInfo info) {
         Configuration.browserSize = "390x844";
+        Configuration.headless = false;
         Selenide.open("https://forum.minecraft-galaxy.ru/guilogin/");
         assertScreen(info);
 //        info.getTestMethod().get().getName()
