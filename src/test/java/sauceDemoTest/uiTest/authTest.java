@@ -14,7 +14,7 @@ import static sauceDemoTest.page.LoginPage.openPage;
 
 @Feature("Saucedemo")
 @Story("Авторизация")
-public class authTest {
+public class authTest extends BaseTest {
 
     private static final String URL = "https://www.saucedemo.com/";
     @Test
