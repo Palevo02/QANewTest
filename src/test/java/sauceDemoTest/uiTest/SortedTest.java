@@ -11,7 +11,7 @@ import sauceDemoTest.page.MainPage;
 import static com.codeborne.selenide.Selenide.$;
 @Feature("Saucedemo")
 @Story("Сортировка")
-public class SortedTest  {
+public class SortedTest {
     @BeforeEach
     public void setUp() {
         LoginPage.openPage().successAuth(Users.commonUser);
