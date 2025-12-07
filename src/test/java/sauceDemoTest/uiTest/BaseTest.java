@@ -9,12 +9,11 @@ public class BaseTest {
 
     @BeforeAll
     public static void setUp() {
-        Configuration.remote = "http://localhost:4444/wd/hub";
         Configuration.browser = "chrome";
-        Configuration.browserVersion = "112.0";
+        Configuration.headless = true;
 //        Configuration.browserSize = "1920x1080";
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--headless", "--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
         Configuration.browserCapabilities = new DesiredCapabilities(options);
     }
 }
