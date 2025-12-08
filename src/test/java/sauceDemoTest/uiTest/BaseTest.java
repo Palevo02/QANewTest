@@ -8,7 +8,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class BaseTest {
 
     @BeforeAll
-    public static void setUp() {
+    public static void init() {
         Configuration.browser = "chrome";
         Configuration.headless = true;
 //        Configuration.browserSize = "1920x1080";

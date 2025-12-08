@@ -9,12 +9,15 @@ import sauceDemoTest.page.LoginPage;
 import sauceDemoTest.page.MainPage;
 
 import static com.codeborne.selenide.Selenide.$;
+import static sauceDemoTest.page.LoginPage.openPage;
+
 @Feature("Saucedemo")
 @Story("Сортировка")
-public class SortedTest {
+public class SortedTest extends BaseTest {
+
     @BeforeEach
     public void setUp() {
-        LoginPage.openPage().successAuth(Users.commonUser);
+        openPage().successAuth(Users.commonUser);
     }
 
     @Test
