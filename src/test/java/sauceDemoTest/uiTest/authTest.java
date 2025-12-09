@@ -24,12 +24,12 @@ public class authTest extends BaseTest {
 
     @Test
     public void testAuthWithWrongPassword(){
-        openPage().successAuth(Users.commonUser);
+        openPage().wrongAuth(Users.commonUser);
     }
 
     @Test
     public void testAuthWithBlockAccount(){
-        openPage().wrongAuth(Users.commonUser);
+        openPage().wrongAuth(Users.lockedOutUser);
     }
 
 
