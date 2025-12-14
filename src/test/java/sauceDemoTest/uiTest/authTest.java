@@ -2,6 +2,8 @@ package sauceDemoTest.uiTest;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.Test;
 import sauceDemoTest.data.User;
@@ -18,16 +20,19 @@ public class authTest extends BaseTest {
 
     private static final String URL = "https://www.saucedemo.com/";
     @Test
+    @Severity(SeverityLevel.BLOCKER)
     public void testAuthWithNormalAccount(){
         openPage().successAuth(Users.commonUser);
     }
 
     @Test
+    @Severity(SeverityLevel.BLOCKER)
     public void testAuthWithWrongPassword(){
         openPage().wrongAuth(Users.commonUser);
     }
 
     @Test
+    @Severity(SeverityLevel.CRITICAL)
     public void testAuthWithBlockAccount(){
         openPage().wrongAuth(Users.lockedOutUser);
     }
