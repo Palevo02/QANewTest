@@ -1,4 +1,4 @@
-package ReqresTest.POJO;
+package reqresTest.POJO;
 
 public class UserData {
     private String id;

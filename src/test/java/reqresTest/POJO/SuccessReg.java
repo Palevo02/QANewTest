@@ -1,15 +1,18 @@
-package ReqresTest.POJO;
+package reqresTest.POJO;
 
 public class SuccessReg {
-    private String id;
+    private Integer id;
     private String token;
 
-    public SuccessReg(String id, String token) {
+    public SuccessReg(Integer id, String token) {
         this.id = id;
         this.token = token;
     }
 
-    public String getId() {
+    public SuccessReg() {
+    }
+
+    public Integer getId() {
         return id;
     }
 

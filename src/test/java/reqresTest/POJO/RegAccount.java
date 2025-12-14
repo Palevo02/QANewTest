@@ -1,15 +1,17 @@
-package ReqresTest.POJO;
+package reqresTest.POJO;
 
-public class RequestAccount {
+public class RegAccount {
+    private String username;
     private String email;
     private String password;
 
-    public RequestAccount(String email, String password) {
+    public RegAccount(String username, String email, String password) {
+        this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    public RequestAccount(String email) {
+    public RegAccount(String email) {
         this.email = email;
     }
 
